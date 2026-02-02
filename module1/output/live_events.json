@@ -1,0 +1,976 @@
+[
+  {
+    "timestamp": "21:19:02",
+    "pid": 6360,
+    "process": "Code.exe",
+    "event": "network_connect",
+    "details": "40.79.173.41:443"
+  },
+  {
+    "timestamp": "21:19:05",
+    "pid": 21764,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "34.54.84.110:443"
+  },
+  {
+    "timestamp": "21:19:07",
+    "pid": 35484,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "21:19:12",
+    "pid": 10336,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "34.54.84.110:443"
+  },
+  {
+    "timestamp": "21:19:23",
+    "pid": 34356,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "21:21:26",
+    "pid": 6360,
+    "process": "Code.exe",
+    "event": "network_connect",
+    "details": "140.82.113.21:443"
+  },
+  {
+    "timestamp": "21:21:27",
+    "pid": 6360,
+    "process": "Code.exe",
+    "event": "network_connect",
+    "details": "52.182.143.215:443"
+  },
+  {
+    "timestamp": "21:21:33",
+    "pid": 6360,
+    "process": "Code.exe",
+    "event": "network_connect",
+    "details": "140.82.113.21:443"
+  },
+  {
+    "timestamp": "21:21:36",
+    "pid": 21764,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "127.0.0.1:64192"
+  },
+  {
+    "timestamp": "21:21:36",
+    "pid": 16664,
+    "process": "Antigravity.exe",
+    "event": "network_connect",
+    "details": "127.0.0.1:51238"
+  },
+  {
+    "timestamp": "21:21:37",
+    "pid": 12160,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "21:21:37",
+    "pid": 23964,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "34.54.84.110:443"
+  },
+  {
+    "timestamp": "21:21:40",
+    "pid": 10336,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "34.54.84.110:443"
+  },
+  {
+    "timestamp": "21:21:41",
+    "pid": 10568,
+    "process": "Antigravity.exe",
+    "event": "network_connect",
+    "details": "2001:4860:4802:34::223:443"
+  },
+  {
+    "timestamp": "21:21:43",
+    "pid": 10336,
+    "process": "language_server_windows_x64.exe",
+    "event": "network_connect",
+    "details": "127.0.0.1:64196"
+  },
+  {
+    "timestamp": "21:21:43",
+    "pid": 33100,
+    "process": "Antigravity.exe",
+    "event": "network_connect",
+    "details": "127.0.0.1:65302"
+  },
+  {
+    "timestamp": "21:21:46",
+    "pid": 24620,
+    "process": "Antigravity.exe",
+    "event": "network_connect",
+    "details": "127.0.0.1:64585"
+  },
+  {
+    "timestamp": "01:55:22",
+    "pid": 29492,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "01:55:37",
+    "pid": 35236,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:29",
+    "pid": 7740,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 13796,
+    "process": "StoreDesktopExtension.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 20900,
+    "process": "backgroundTaskHost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 24840,
+    "process": "backgroundTaskHost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 32140,
+    "process": "RuntimeBroker.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 32236,
+    "process": "backgroundTaskHost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:32",
+    "pid": 24428,
+    "process": "StoreDesktopExtension.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "01:59:37",
+    "pid": 8884,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:00:00",
+    "pid": 7740,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:00:07",
+    "pid": 8884,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:08:33",
+    "pid": 17324,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:08:37",
+    "pid": 30548,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:09:07",
+    "pid": 30548,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:09:27",
+    "pid": 27928,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:09:27",
+    "pid": 32484,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:09:27",
+    "pid": 24956,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:09:42",
+    "pid": 5980,
+    "process": "taskhostw.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:09:44",
+    "pid": 30184,
+    "process": "sppsvc.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:09:45",
+    "pid": 5980,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:09:58",
+    "pid": 32484,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:10:14",
+    "pid": 30184,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:10:44",
+    "pid": 28728,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:11:04",
+    "pid": 30964,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:11:36",
+    "pid": 30964,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:11:54",
+    "pid": 34956,
+    "process": "svchost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:17",
+    "pid": 27000,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:21",
+    "pid": 32828,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:33",
+    "pid": 17224,
+    "process": "LenovoVantage-(SmartColorAddin).exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:33",
+    "pid": 35820,
+    "process": "LenovoVantage-(GenericTelemetryAddin).exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:33",
+    "pid": 28012,
+    "process": "conhost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:33",
+    "pid": 27440,
+    "process": "OAWrapper.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:33",
+    "pid": 9300,
+    "process": "svchost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:34",
+    "pid": 1508,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:35",
+    "pid": 21528,
+    "process": "LenovoVantage-(DeviceSettingsSystemAddin).exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:35",
+    "pid": 3796,
+    "process": "NvOAWrapperCache.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:36",
+    "pid": 29284,
+    "process": "OAWrapper.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:36",
+    "pid": 30588,
+    "process": "conhost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:36",
+    "pid": 27440,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:36",
+    "pid": 28012,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:37",
+    "pid": 5224,
+    "process": "conhost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:37",
+    "pid": 30588,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:37",
+    "pid": 29284,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:38",
+    "pid": 27320,
+    "process": "OAWrapper.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:38",
+    "pid": 5224,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:38",
+    "pid": 9400,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:39",
+    "pid": 19340,
+    "process": "OAWrapper.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:39",
+    "pid": 29492,
+    "process": "conhost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:12:39",
+    "pid": 27320,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:40",
+    "pid": 19340,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:40",
+    "pid": 29492,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:43",
+    "pid": 17224,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:12:44",
+    "pid": 21528,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:13:07",
+    "pid": 3796,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:13:09",
+    "pid": 27000,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:13:40",
+    "pid": 7016,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:13:42",
+    "pid": 34336,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:14:35",
+    "pid": 7016,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:15:07",
+    "pid": 27928,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:15:15",
+    "pid": 19984,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:17:23",
+    "pid": 19984,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:17:31",
+    "pid": 12524,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:17:35",
+    "pid": 35820,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:18:43",
+    "pid": 35268,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:18:43",
+    "pid": 32828,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:19:14",
+    "pid": 35268,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:19:24",
+    "pid": 4364,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:19:55",
+    "pid": 4364,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:20:01",
+    "pid": 29244,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:20:03",
+    "pid": 26732,
+    "process": "MicrosoftEdgeUpdate.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:20:04",
+    "pid": 26732,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:20:32",
+    "pid": 29244,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:21:54",
+    "pid": 34956,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:22:20",
+    "pid": 12524,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:22:29",
+    "pid": 35072,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:23:19",
+    "pid": 34808,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:23:50",
+    "pid": 34808,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:23:55",
+    "pid": 22076,
+    "process": "svchost.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:24:20",
+    "pid": 22076,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:24:21",
+    "pid": 19368,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:24:22",
+    "pid": 25024,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:25:07",
+    "pid": 19368,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:44",
+    "pid": 20892,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:25:44",
+    "pid": 34336,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:45",
+    "pid": 22496,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:47",
+    "pid": 7876,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:51",
+    "pid": 27404,
+    "process": "opera.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 10464,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 35072,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 25024,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 16996,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 17156,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 20220,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 24552,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 27404,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 27980,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 6268,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 13300,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 23604,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 13876,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 13660,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 15704,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 14164,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:52",
+    "pid": 20892,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 25000,
+    "process": "opera_autoupdate.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 29144,
+    "process": "opera_autoupdate.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 23040,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 19964,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 8032,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 7716,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 13384,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 9960,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 14412,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 22736,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 21204,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 30004,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 17880,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 26076,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "02:25:53",
+    "pid": 10972,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:10",
+    "pid": 21752,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:10",
+    "pid": 19708,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:10",
+    "pid": 6924,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:12",
+    "pid": 10828,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:16",
+    "pid": 13624,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:17",
+    "pid": 3908,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:18",
+    "pid": 21736,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:18",
+    "pid": 21712,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:18",
+    "pid": 10576,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:18",
+    "pid": 19548,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:19",
+    "pid": 6884,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:19",
+    "pid": 4328,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:19",
+    "pid": 22892,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:19",
+    "pid": 14104,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:19",
+    "pid": 22012,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:20",
+    "pid": 21540,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:25",
+    "pid": 19180,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:28",
+    "pid": 23200,
+    "process": "BGHelper.exe",
+    "event": "process_start"
+  },
+  {
+    "timestamp": "09:35:33",
+    "pid": 22092,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:37",
+    "pid": 9500,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:39",
+    "pid": 18892,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:35:40",
+    "pid": 15440,
+    "process": "unknown",
+    "event": "process_terminate"
+  },
+  {
+    "timestamp": "09:38:18",
+    "pid": 19116,
+    "process": "unknown",
+    "event": "process_terminate"
+  }
+]

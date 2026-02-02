@@ -1,0 +1,57 @@
+2026-01-31 13:11:23,524 - Windows detection script started successfully.
+2026-01-31 13:20:21,433 - OS Level Malware Detection Started
+2026-01-31 13:20:21,452 - 
+Checking Process: explorer.exe
+2026-01-31 13:20:21,454 - Current CPU:30% Memory:200MB
+2026-01-31 13:20:21,454 - Deviation Score: 0.0
+2026-01-31 13:20:21,456 - Final Decision: NORMAL
+2026-01-31 13:20:21,462 - 
+Checking Process: unknown.exe
+2026-01-31 13:20:21,464 - Current CPU:90% Memory:800MB
+2026-01-31 13:20:21,466 - Deviation Score: 0.9
+2026-01-31 13:20:21,468 - Final Decision: MALWARE
+2026-01-31 13:20:21,468 - 
+Detection Completed
+2026-01-31 13:24:28,211 - OS Level Malware Detection Started
+2026-01-31 13:24:28,211 - Baseline Loaded -> CPU:50% Memory:300MB
+2026-01-31 13:24:28,211 - 
+Checking Process -> explorer.exe
+2026-01-31 13:24:28,211 - Current CPU -> 30% Memory -> 200MB
+2026-01-31 13:24:28,211 - Deviation Score -> 0.0
+2026-01-31 13:24:28,211 - Final Decision -> NORMAL
+2026-01-31 13:24:28,211 - 
+Checking Process -> unknown.exe
+2026-01-31 13:24:28,211 - Current CPU -> 90% Memory -> 800MB
+2026-01-31 13:24:28,211 - Deviation Score -> 0.9
+2026-01-31 13:24:28,211 - Final Decision -> MALWARE
+2026-01-31 13:24:28,211 - 
+Checking Process -> svchost.exe
+2026-01-31 13:24:28,211 - Current CPU -> 45% Memory -> 350MB
+2026-01-31 13:24:28,211 - Deviation Score -> 0.4
+2026-01-31 13:24:28,211 - Final Decision -> SUSPICIOUS
+2026-01-31 13:24:28,211 - 
+Detection Completed
+2026-01-31 13:27:09,492 - OS Level Malware Detection Started
+2026-01-31 13:27:09,511 - Baseline Loaded -> CPU:50% Memory:300MB
+2026-01-31 13:27:09,546 - 
+Checking Process -> explorer.exe
+2026-01-31 13:27:09,556 - Current CPU -> 30% Memory -> 200MB
+2026-01-31 13:27:09,559 - Deviation Score -> 0.0
+2026-01-31 13:27:09,561 - Final Decision -> NORMAL
+2026-01-31 13:27:09,564 - 
+Checking Process -> unknown.exe
+2026-01-31 13:27:09,566 - Current CPU -> 90% Memory -> 800MB
+2026-01-31 13:27:09,572 - Deviation Score -> 0.9
+2026-01-31 13:27:09,576 - Final Decision -> MALWARE
+2026-01-31 13:27:09,580 - 
+Checking Process -> svchost.exe
+2026-01-31 13:27:09,581 - Current CPU -> 45% Memory -> 350MB
+2026-01-31 13:27:09,581 - Deviation Score -> 0.4
+2026-01-31 13:27:09,581 - Final Decision -> SUSPICIOUS
+2026-01-31 13:27:09,583 - 
+Detection Completed
+2026-01-31 13:37:08,692 - OS Level Malware Detection Started
+2026-01-31 13:37:08,692 - Status: Malicious, Risk Level: MALWARE,
+2026-01-31 13:37:08,692 - Anomaly Score: 79.0, Details: CPU Usage: 85%, Memory Usage: 750MB, File Access Count: 45
+2026-01-31 13:37:08,692 - Status: Normal, Risk Level: NORMAL,
+2026-01-31 13:37:08,692 - Anomaly Score: 0, Details: CPU Usage: 30%, Memory Usage: 200MB, File Access Count: 5
