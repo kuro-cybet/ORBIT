@@ -10,6 +10,7 @@ from ui.styles import Theme
 from ui.widgets.behavior import BehaviorGraphWidget
 from ui.widgets.syscalls import SyscallChartWidget, SyscallLogWidget
 from ui.widgets.alert import SecurityAlert
+from module4.process_state_manager import get_live_process_state
 import random
 from datetime import datetime
 
@@ -87,15 +88,26 @@ class DashboardPage(QWidget):
         main_layout.addLayout(right_layout, 40) # 40% width
 
         # --- Data & Timers ---
-        self.processes = [
-            {"pid": 1102, "name": "explorer.exe", "risk": 5,  "status": "Clean"},
-            {"pid": 4022, "name": "chrome.exe",   "risk": 12, "status": "Clean"},
-            {"pid": 9182, "name": "svchost.exe",  "risk": 2,  "status": "Clean"},
-            {"pid": 6601, "name": "cmd.exe",      "risk": 45, "status": "Suspicious"},
-            {"pid": 1024, "name": "winlogon.exe", "risk": 0,  "status": "Clean"},
-            {"pid": 8890, "name": "unknown_svc",  "risk": 95, "status": "Malware"},
-            {"pid": 5512, "name": "powershell",   "risk": 60, "status": "Suspicious"},
-        ]
+        # Try to load live data first, fall back to mock data
+        self.use_live_data = False
+        live_processes = get_live_process_state()
+        
+        if live_processes:
+            self.processes = live_processes
+            self.use_live_data = True
+            self.log_event("Live data source connected. Displaying real-time system processes.")
+        else:
+            # Mock data fallback
+            self.processes = [
+                {"pid": 1102, "name": "explorer.exe", "risk": 5,  "status": "Clean"},
+                {"pid": 4022, "name": "chrome.exe",   "risk": 12, "status": "Clean"},
+                {"pid": 9182, "name": "svchost.exe",  "risk": 2,  "status": "Clean"},
+                {"pid": 6601, "name": "cmd.exe",      "risk": 45, "status": "Suspicious"},
+                {"pid": 1024, "name": "winlogon.exe", "risk": 0,  "status": "Clean"},
+                {"pid": 8890, "name": "unknown_svc",  "risk": 95, "status": "Malware"},
+                {"pid": 5512, "name": "powershell",   "risk": 60, "status": "Suspicious"},
+            ]
+            self.log_event("Using mock data. Live data source unavailable.")
         
         # Track reported PIDs to avoid duplicate auto-reports
         self.reported_pids = set()
@@ -106,14 +118,22 @@ class DashboardPage(QWidget):
         
         self.populate_table()
         
-        # Select Malware by default
-        self.table.selectRow(5) 
-        self.on_selection_change()
+        # Select first row if available
+        if len(self.processes) > 0:
+            self.table.selectRow(0)
+            self.on_selection_change()
 
-        # Risk Update Timer
-        self.risk_timer = QTimer(self)
-        self.risk_timer.timeout.connect(self.simulate_risk_drift)
-        self.risk_timer.start(1000)
+        # Live Data Refresh Timer (only if using live data)
+        if self.use_live_data:
+            self.live_data_timer = QTimer(self)
+            self.live_data_timer.timeout.connect(self.refresh_live_data)
+            self.live_data_timer.start(2000)  # Poll every 2 seconds
+        
+        # Risk Update Timer (for mock data drift simulation)
+        if not self.use_live_data:
+            self.risk_timer = QTimer(self)
+            self.risk_timer.timeout.connect(self.simulate_risk_drift)
+            self.risk_timer.start(1000)
         
         # Syscall Stream Timer
         self.sys_timer = QTimer(self)
@@ -121,11 +141,70 @@ class DashboardPage(QWidget):
         self.sys_timer.start(150) # Fast updates
 
         self.log_event("Dashboard initialized. Monitoring subsystems active.")
-        self.log_event("WARNING: High-risk anomaly detected in PID 8890 (unknown_svc).")
+        if self.use_live_data and any(p["status"] in ["Malware", "Suspicious"] for p in self.processes):
+            suspicious = [p for p in self.processes if p["status"] in ["Malware", "Suspicious"]]
+            for p in suspicious[:3]:  # Log first 3 suspicious processes
+                self.log_event(f"WARNING: {p['status']} process detected - {p['name']} (PID {p['pid']})")
 
     def arm_system(self):
         self.system_armed = True
         self.log_event("SYSTEM ARMED: Active threat interception enabled.")
+    
+    def refresh_live_data(self):
+        """Poll for new process data from Module 1's event stream"""
+        if not self.use_live_data:
+            return
+        
+        # Get updated process state
+        live_processes = get_live_process_state()
+        
+        if not live_processes:
+            return  # Keep current data if update fails
+        
+        # Track current selection
+        current_selection = None
+        rows = self.table.selectionModel().selectedRows()
+        if rows:
+            current_pid = self.processes[rows[0].row()]["pid"]
+            current_selection = current_pid
+        
+        # Update process list
+        old_pids = {p["pid"] for p in self.processes}
+        new_pids = {p["pid"] for p in live_processes}
+        
+        # Log new processes and trigger alerts for suspicious/malware
+        added_pids = new_pids - old_pids
+        for pid in added_pids:
+            proc = next(p for p in live_processes if p["pid"] == pid)
+            self.log_event(f"NEW PROCESS: {proc['name']} (PID {pid})")
+            
+            # Auto-alert for Suspicious or Malware processes
+            if self.system_armed and proc["status"] in ["Suspicious", "Malware"] and pid not in self.reported_pids:
+                self.create_report(proc, auto=True)
+        
+        # Log terminated processes
+        removed_pids = old_pids - new_pids
+        for pid in removed_pids:
+            proc = next((p for p in self.processes if p["pid"] == pid), None)
+            if proc:
+                self.log_event(f"TERMINATED: {proc['name']} (PID {pid})")
+        
+        # Update data
+        self.processes = live_processes
+        self.populate_table()
+        
+        # Restore selection if possible
+        if current_selection:
+            for r, p in enumerate(self.processes):
+                if p["pid"] == current_selection:
+                    self.table.selectRow(r)
+                    break
+        elif len(self.processes) > 0:
+            self.table.selectRow(0)
+        
+        self.on_selection_change()
+
+
 
     def create_btn(self, text, color_hex):
         btn = QPushButton(text)
@@ -359,15 +438,26 @@ class DashboardPage(QWidget):
         else:
              self.log_event(f"REPORT GENERATED: Incident #2024-{report_id} for PID {p['pid']}")
 
-        # ALERT POPUP if Malware (Manual OR Auto when Armed)
-        if p["status"] == "Malware":
+        # ALERT POPUP for Suspicious or Malware (Manual OR Auto when Armed)
+        if p["status"] in ["Suspicious", "Malware"]:
             # If auto, only show if we are armed (redundant check but safe)
             if not auto or self.system_armed:
                 alert = SecurityAlert(self, data=p)
-                if alert.exec_(): 
-                    # Isolate clicked
-                    self.action_kill() 
-                    pass
+                result = alert.exec_()
+                
+                if result == 1:
+                    # Isolate/Terminate (for Malware)
+                    self.action_kill()
+                elif result == 2:
+                    # Navigate to Reports (for Suspicious)
+                    # Get the main window to switch pages
+                    main_window = self.window()
+                    if hasattr(main_window, 'pages') and hasattr(main_window, 'sidebar'):
+                        # Switch to Reports page (index 2)
+                        main_window.pages.setCurrentIndex(2)
+                        # Highlight the sidebar button
+                        main_window.sidebar.btn_reports.click()
+
         
         # Emit data
         report_data = {

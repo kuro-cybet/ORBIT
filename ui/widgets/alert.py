@@ -13,6 +13,33 @@ class SecurityAlert(QDialog):
         self.data = data or {}
         pname = self.data.get("name", "Unknown")
         pid = self.data.get("pid", "0000")
+        status = self.data.get("status", "Malware")
+        
+        # Determine colors and text based on threat level
+        if status == "Suspicious":
+            alert_color = "#f59e0b"  # Amber/Yellow
+            icon_text = "⚠"
+            title_text = "SUSPICIOUS ACTIVITY DETECTED"
+            subtitle_text = "POTENTIAL THREAT IDENTIFIED"
+            body_text = (
+                f"Active process <b>{pname}</b> (PID {pid}) is exhibiting suspicious behavior patterns "
+                "including unusual system calls and network activity.\\n\\n"
+                "This activity may indicate reconnaissance or lateral movement attempts."
+                "\\n\\nReview and investigation recommended."
+            )
+            btn_text = "INVESTIGATE"
+        else:  # Malware
+            alert_color = Theme.COLOR_MALWARE  # Red
+            icon_text = "⚠"
+            title_text = "CRITICAL SECURITY ALERT"
+            subtitle_text = "MALICIOUS BEHAVIOR DETECTED"
+            body_text = (
+                f"Active process <b>{pname}</b> (PID {pid}) is attempting to execute unsigned code "
+                "and establish a remote connection to a known C2 server.\\n\\n"
+                "This behavior matches the signature of <b>Trojan.Win32.Generic</b>."
+                "\\n\\nImmediate containment is recommended."
+            )
+            btn_text = "ISOLATE HOST"
         
         # Main Layout (Centered Frame)
         layout = QVBoxLayout(self)
@@ -23,7 +50,7 @@ class SecurityAlert(QDialog):
         self.frame.setStyleSheet(f"""
             QFrame {{
                 background-color: {Theme.COLOR_BG};
-                border: 2px solid {Theme.COLOR_MALWARE};
+                border: 2px solid {alert_color};
                 border-radius: 6px;
             }}
         """)
@@ -31,7 +58,7 @@ class SecurityAlert(QDialog):
         # Shadow
         shadow = QGraphicsDropShadowEffect()
         shadow.setBlurRadius(20)
-        shadow.setColor(QColor(Theme.COLOR_MALWARE))
+        shadow.setColor(QColor(alert_color))
         shadow.setOffset(0, 0)
         self.frame.setGraphicsEffect(shadow)
         
@@ -43,13 +70,13 @@ class SecurityAlert(QDialog):
         
         # Header
         hdr = QHBoxLayout()
-        icon = QLabel("⚠")
-        icon.setStyleSheet(f"font-size: 32px; color: {Theme.COLOR_MALWARE}; border: none;")
+        icon = QLabel(icon_text)
+        icon.setStyleSheet(f"font-size: 32px; color: {alert_color}; border: none;")
         
         title_layout = QVBoxLayout()
-        title = QLabel("CRITICAL SECURITY ALERT")
-        title.setStyleSheet(f"font-size: 18px; font-weight: bold; color: {Theme.COLOR_MALWARE}; border: none;")
-        subtitle = QLabel("MALICIOUS BEHAVIOR DETECTED")
+        title = QLabel(title_text)
+        title.setStyleSheet(f"font-size: 18px; font-weight: bold; color: {alert_color}; border: none;")
+        subtitle = QLabel(subtitle_text)
         subtitle.setStyleSheet(f"font-size: 12px; color: {Theme.COLOR_TEXT_MAIN}; letter-spacing: 2px; border: none;")
         title_layout.addWidget(title)
         title_layout.addWidget(subtitle)
@@ -63,16 +90,11 @@ class SecurityAlert(QDialog):
         # Divider
         line = QFrame()
         line.setFrameShape(QFrame.HLine)
-        line.setStyleSheet(f"background-color: {Theme.COLOR_MALWARE}; max-height: 1px; border: none;")
+        line.setStyleSheet(f"background-color: {alert_color}; max-height: 1px; border: none;")
         inner.addWidget(line)
         
         # Body
-        body = QLabel(
-            f"Active process <b>{pname}</b> (PID {pid}) is attempting to execute unsigned code "
-            "and establish a remote connection to a known C2 server.\n\n"
-            "This behavior matches the signature of <b>Trojan.Win32.Generic</b>."
-            "\n\nImmediate containment is recommended."
-        )
+        body = QLabel(body_text)
         body.setWordWrap(True)
         body.setStyleSheet(f"color: {Theme.COLOR_TEXT_MAIN}; font-size: 13px; margin: 10px 0; border: none;")
         inner.addWidget(body)
@@ -80,20 +102,24 @@ class SecurityAlert(QDialog):
         # Buttons
         btns = QHBoxLayout()
         
-        btn_isolate = QPushButton("ISOLATE HOST")
+        btn_isolate = QPushButton(btn_text)
         btn_isolate.setCursor(Qt.PointingHandCursor)
         btn_isolate.setStyleSheet(f"""
             QPushButton {{
-                background-color: {Theme.COLOR_MALWARE};
+                background-color: {alert_color};
                 color: white;
                 font-weight: bold;
                 border-radius: 4px;
                 padding: 8px 16px;
                 border: none;
             }}
-            QPushButton:hover {{ background-color: #dc2626; }}
+            QPushButton:hover {{ background-color: {alert_color}dd; }}
         """)
-        btn_isolate.clicked.connect(self.accept)
+        # Different actions based on threat level
+        if status == "Suspicious":
+            btn_isolate.clicked.connect(lambda: self.done(2))  # 2 = Navigate to reports
+        else:
+            btn_isolate.clicked.connect(lambda: self.done(1))  # 1 = Isolate/terminate
         
         btn_ignore = QPushButton("IGNORE ALERT")
         btn_ignore.setCursor(Qt.PointingHandCursor)
@@ -115,3 +141,5 @@ class SecurityAlert(QDialog):
         inner.addLayout(btns)
         
         # Pulse Animation logic (simple border flash) can go here
+
+
