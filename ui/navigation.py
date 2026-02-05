@@ -35,11 +35,13 @@ class Sidebar(QFrame):
         self.btn_dashboard = self.create_nav_btn("DASHBOARD", 0, active=True)
         self.btn_network = self.create_nav_btn("NETWORK", 1)
         self.btn_reports = self.create_nav_btn("REPORTS", 2)
-        self.btn_settings = self.create_nav_btn("SETTINGS", 3)
+        self.btn_benchmark = self.create_nav_btn("BENCHMARK", 3)
+        self.btn_settings = self.create_nav_btn("SETTINGS", 4)
         
         layout.addWidget(self.btn_dashboard)
         layout.addWidget(self.btn_network)
         layout.addWidget(self.btn_reports)
+        layout.addWidget(self.btn_benchmark)
         layout.addWidget(self.btn_settings)
         
         # Spacer
@@ -51,7 +53,7 @@ class Sidebar(QFrame):
         lbl_ver.setStyleSheet(f"color: {Theme.COLOR_TEXT_DIM}; font-size: 10px;")
         layout.addWidget(lbl_ver)
         
-        self.buttons = [self.btn_dashboard, self.btn_network, self.btn_reports, self.btn_settings]
+        self.buttons = [self.btn_dashboard, self.btn_network, self.btn_reports, self.btn_benchmark, self.btn_settings]
 
     def create_nav_btn(self, text, index, active=False):
         btn = QPushButton(text)

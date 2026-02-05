@@ -1,65 +1,39 @@
-# ----------------------------
 # Python cache / compiled
-# ----------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# ----------------------------
 # Virtual environments
-# ----------------------------
 venv/
 .env/
-.env.bak/
 .venv/
 
-# ----------------------------
 # IDE / Editor files
-# ----------------------------
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# ----------------------------
 # OS generated files
-# ----------------------------
 .DS_Store
 Thumbs.db
 
-# ----------------------------
-# Logs & runtime outputs
-# ----------------------------
+# Logs
 *.log
 
-# ----------------------------
-# ORBIT runtime data (IMPORTANT)
-# Real-time / mock data should NOT be versioned
-# ----------------------------
+# ORBIT runtime data
 module1/output/
-module4/output/
-live_events.json
-raw_behavior_data.json
-baseline_profile.json
-windows_app_profile.json
-windows_apps_profile.json
+module3/results/
+*.json
 
-# ----------------------------
-# Reports / generated files
-# ----------------------------
-reports/
-*.pdf
+# Security & Authentication (CRITICAL - DO NOT COMMIT)
+config/.credentials
+config/.session
+config/.login_attempts
+logs/
 
-# ----------------------------
-# Temporary test files
-# ----------------------------
-test_*.json
-debug_*.json
-
-# ----------------------------
-# Optional: large media (videos / animations)
-# ----------------------------
-*.mp4
-*.mov
-*.avi
+# PyInstaller build artifacts
+build/
+dist/
+*.spec

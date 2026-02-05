@@ -1,0 +1,18 @@
+# ORBIT Dependencies
+# Security-vetted packages with pinned versions
+
+# GUI Framework
+PyQt5==5.15.10
+
+# Security & Cryptography
+# (Using built-in hashlib and secrets for now)
+
+# System Monitoring
+psutil==5.9.8
+
+# Data Processing
+# (Using built-in json)
+
+# Development & Testing (optional)
+# bandit==1.7.5  # Security linter
+# safety==3.0.1  # Dependency vulnerability scanner
